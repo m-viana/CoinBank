@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Coin Bank</string>
+
+    <!--Tela Login-->
+    <string name="wellcome_login">Seja bem vindo!</string>
+    <string name="il_login">Login</string>
+    <string name="il_password">Senha</string>
+    <string name="forgot_password">ESQUECI MINHA SENHA</string>
+    <string name="button_login">ENTRAR</string>
+    <string name="question_login">Ainda não é cadastrado?</string>
+    <string name="register_login">CADASTRE-SE</string>
+
+    <!--Tela Esqueci senha-->
+    <string name="question_forgot_password">Esqueceu sua senha?</string>
+    <string name="tv_description_forget_passoword">Enviaremos um código de recuperação para\no seu
+        email ex***@mail.com\n\nPor favor preencha o endereço:</string>
+    <string name="send_button">ENVIAR</string>
+    <string name="il_forgot_password">E-mail</string>
+
+    <!--Tela de Cadastro-->
+    <string name="title_register">Vamos preencher o cadastro!</string>
+    <string name="il_name_register">Nome</string>
+    <string name="il_email_register">E-mail</string>
+    <string name="confirm_email_register">Confirmar E-mail</string>
+    <string name="password_register">Senha</string>
+    <string name="confirm_password_register">Confirmar Senha</string>
+    <string name="cpf_register">CPF</string>
+    <string name="date_birth_register">Data de Nascimento</string>
+    <string name="phone_register">Telefone</string>
+    <string name="check_terms_use">Eu concordo com os termos e condições</string>
+</resources>
