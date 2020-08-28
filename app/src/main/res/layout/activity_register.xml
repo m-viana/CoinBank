@@ -204,7 +204,7 @@
                     android:id="@+id/button_send_forgot_password"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/send_button"
+                    android:text="@string/button_register"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
