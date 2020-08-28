@@ -70,4 +70,10 @@
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.</string>
 
+    <!--Tela Contato-->
+    <string name="talk_support_question">FALE COM A GENTE!</string>
+    <string name="description_contact">Dúvidas, sugestões ou reclamações?\nEntre em contato e
+        \nretornaremos pelo email informado!</string>
+    <string name="message_contact">Mensagem</string>
+
 </resources>

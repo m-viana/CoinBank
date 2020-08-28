@@ -22,7 +22,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:title="CONTATO"
-            app:titleTextColor="@color/colorPrimaryDark"/>
+            app:titleTextColor="@color/colorWhite"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_question_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/talk_support_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb_contact"
+            app:fontFamily="@font/font_exo_bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_description_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description_contact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question_contact"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:fontFamily="@font/font_exo_bold"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -47,6 +76,77 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_email_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/il_email_register"
+                    style="@style/TextInputLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginHorizontal="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iet_email_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:inputType="textEmailAddress"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_password_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_register"
+                    style="@style/TextInputLayout"
+                    app:layout_constraintStart_toStartOf="@+id/il_email_contact"
+                    app:layout_constraintEnd_toEndOf="@+id/il_email_contact"
+                    app:layout_constraintTop_toBottomOf="@+id/il_email_contact"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iet_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_message_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="250dp"
+                    android:hint="@string/message_contact"
+                    style="@style/TextInputLayout"
+                    app:layout_constraintStart_toStartOf="@+id/il_email_contact"
+                    app:layout_constraintEnd_toEndOf="@+id/il_email_contact"
+                    app:layout_constraintTop_toBottomOf="@+id/il_password_contact"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iet_message_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="250dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:inputType="textEmailAddress"
+                        android:gravity="top"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/button_send_contact"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send_button"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/il_message_contact"
+                    android:layout_marginTop="20dp" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
