@@ -76,4 +76,22 @@
         \nretornaremos pelo email informado!</string>
     <string name="message_contact">Mensagem</string>
 
+    <!--Tela de Acompanhamento de proposta-->
+    <string name="text_status">SEU PEDIDO FOI</string>
+    <string name="tv_status">APROVADO</string>
+    <string name="message_status">O valor solicitado foi\ndepositado em sua conta\ne já pode ser resgatado!</string>
+    <string name="button_back">VOLTAR</string>
+
+    <!--Menu-->
+    <string name="menu_info">INFO</string>
+    <string name="menu_home">HOME</string>
+
+    <!--Menu Informações-->
+    <string name="change_password">Alterar Senha</string>
+    <string name="about_info">Sobre</string>
+    <string name="pp_info">Políticas de Privacidade</string>
+    <string name="terms_use_info">Termos de Uso</string>
+    <string name="contact_info">Contato</string>
+    <string name="exit_info">Sair</string>
+
 </resources>

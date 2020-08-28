@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import br.com.mateus.coinbank.R
 import br.com.mateus.coinbank.viewmodel.ChangePasswordViewModel
+import kotlinx.android.synthetic.main.change_password_fragment.*
 
 class ChangePasswordFragment : Fragment() {
 
@@ -27,7 +29,13 @@ class ChangePasswordFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(ChangePasswordViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        tb_change_password.setNavigationOnClickListener { activity?.onBackPressed() }
+        button_change_password.setOnClickListener {
+            Toast.makeText(context, "Senha alterada com suceso!", Toast.LENGTH_SHORT).show()
+            activity?.onBackPressed() }
+
+
     }
 
 }

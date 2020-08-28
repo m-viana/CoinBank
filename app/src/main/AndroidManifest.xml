@@ -9,22 +9,21 @@
         android:roundIcon="@drawable/ic_app_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".view.activities.NavHostActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".view.activities.RegisterActivity"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".view.activities.ForgetPasswordActivity"
-            android:screenOrientation="portrait"/>
-
+        <activity
+            android:name=".view.activities.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.activities.LoginActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".view.activities.MainActivity"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

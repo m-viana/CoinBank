@@ -21,7 +21,7 @@
     <style name="TextInputLayoutDark" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeColor">@color/color_edit_text</item>
         <item name="boxStrokeErrorColor">@color/colorError</item>
         <item name="boxStrokeWidth">1dp</item>
         <item name="boxStrokeWidthFocused">2dp</item>
@@ -36,6 +36,23 @@
         <item name="layout_constraintStart_toStartOf">parent</item>
         <item name="layout_constraintTop_toTopOf">parent</item>
         <item name="navigationIcon">@drawable/ic_tb_arrow</item>
+    </style>
+
+    <!--Itens do menu do card da tela Informações-->
+    <style name="textInfoMenu" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!--View entre os textos das opções do card da tela Informações-->
+
+    <style name="viewInformações" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
     </style>
 
 </resources>
