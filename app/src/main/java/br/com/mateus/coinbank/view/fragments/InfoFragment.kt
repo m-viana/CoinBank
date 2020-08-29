@@ -31,9 +31,25 @@ class InfoFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(InfoViewModel::class.java)
         // TODO: Use the ViewModel
 
-        tv_change_password.setOnClickListener { findNavController().navigate(R.id.changePasswordFragment) }
-        tv_contact_info.setOnClickListener { findNavController().navigate(R.id.contactFragment) }
-        tv_about_info.setOnClickListener { findNavController().navigate(R.id.aboutFragment) }
+        tv_change_password.setOnClickListener { findNavController().navigate(R.id.action_nav_info_to_changePasswordFragment) }
+        tv_contact_info.setOnClickListener { findNavController().navigate(R.id.action_nav_info_to_contactFragment) }
+
+        /*Envia um argumento que é recebido do outro lado, possui uma chave e um título, quando
+        * passo um argumento tmb preciso passar o bundle junto com o navigate*/
+        tv_about_info.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("key_about", "SOBRE")
+            findNavController().navigate(R.id.action_nav_info_to_aboutFragment, bundle) }
+
+        tv_pp_info.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("key_about", "POLÍTICAS DE PRIVACIDADE")
+            findNavController().navigate(R.id.action_nav_info_to_aboutFragment, bundle) }
+
+        tv_terms_use_info.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("key_about", "TERMOS DE USO")
+            findNavController().navigate(R.id.action_nav_info_to_aboutFragment, bundle) }
     }
 
 }

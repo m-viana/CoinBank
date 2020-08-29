@@ -16,20 +16,69 @@
         android:id="@+id/nav_info"
         android:name="br.com.mateus.coinbank.view.fragments.InfoFragment"
         android:label="info_fragment"
-        tools:layout="@layout/info_fragment" />
+        tools:layout="@layout/info_fragment" >
+        <action
+            android:id="@+id/action_nav_info_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_info_to_contactFragment"
+            app:destination="@id/contactFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_info_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
     <fragment
         android:id="@+id/changePasswordFragment"
         android:name="br.com.mateus.coinbank.view.fragments.ChangePasswordFragment"
         android:label="change_password_fragment"
-        tools:layout="@layout/change_password_fragment" />
+        tools:layout="@layout/change_password_fragment" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_nav_info"
+            app:destination="@id/nav_info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
     <fragment
         android:id="@+id/contactFragment"
         android:name="br.com.mateus.coinbank.view.fragments.ContactFragment"
         android:label="contact_fragment"
-        tools:layout="@layout/contact_fragment" />
+        tools:layout="@layout/contact_fragment" >
+        <action
+            android:id="@+id/action_contactFragment_to_nav_info"
+            app:destination="@id/nav_info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
     <fragment
         android:id="@+id/aboutFragment"
         android:name="br.com.mateus.coinbank.view.fragments.AboutFragment"
         android:label="about_fragment"
-        tools:layout="@layout/about_fragment" />
+        tools:layout="@layout/about_fragment" >
+        <action
+            android:id="@+id/action_aboutFragment_to_nav_info"
+            app:destination="@id/nav_info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 </navigation>
