@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import br.com.mateus.coinbank.R
 import br.com.mateus.coinbank.viewmodel.StatusViewModel
+import kotlinx.android.synthetic.main.status_fragment.*
 
 class StatusFragment : Fragment() {
 
@@ -27,7 +29,10 @@ class StatusFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(StatusViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        tb_status.setOnClickListener { activity?.onBackPressed() }
+        button_back_status.setOnClickListener { activity?.onBackPressed() }
+
     }
 
 }

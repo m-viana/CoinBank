@@ -10,6 +10,13 @@
         android:name="br.com.mateus.coinbank.view.fragments.HomeFragment"
         android:label="home_fragment"
         tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_nav_home_to_statusFragment"
+            app:destination="@id/statusFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -76,6 +83,20 @@
         <action
             android:id="@+id/action_aboutFragment_to_nav_info"
             app:destination="@id/nav_info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="br.com.mateus.coinbank.view.fragments.StatusFragment"
+        android:label="status_fragment"
+        tools:layout="@layout/status_fragment" >
+        <action
+            android:id="@+id/action_statusFragment_to_nav_home"
+            app:destination="@id/nav_home"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"

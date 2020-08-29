@@ -3,11 +3,217 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragments.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.HomeFragment"
+    android:background="@color/colorPrimary"
+    android:padding="10dp">
 
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home fragment" />
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/iv_info"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="10dp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/exit_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exit_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcv_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_home"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginTop="30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/il_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/value"
+                            style="@style/TextInputLayout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginHorizontal="10dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/iet_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/il_monthly_income"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/monthly_income"
+                            style="@style/TextInputLayout"
+                            app:layout_constraintStart_toStartOf="@+id/il_value"
+                            app:layout_constraintEnd_toEndOf="@+id/il_value"
+                            app:layout_constraintTop_toBottomOf="@+id/il_value"
+                            android:layout_marginTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/iet_monthly_income"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/il_many_parcels"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/many_parcels"
+                            style="@style/TextInputLayout"
+                            app:layout_constraintStart_toStartOf="@+id/il_value"
+                            app:layout_constraintEnd_toEndOf="@+id/il_value"
+                            app:layout_constraintTop_toBottomOf="@+id/il_monthly_income"
+                            android:layout_marginTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/iet_many_parcels"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/il_first_parcels"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/first_parcels"
+                            style="@style/TextInputLayout"
+                            app:layout_constraintStart_toStartOf="@+id/il_value"
+                            app:layout_constraintEnd_toEndOf="@+id/il_value"
+                            app:layout_constraintTop_toBottomOf="@+id/il_many_parcels"
+                            android:layout_marginTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/iet_first_parcels"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/il_reason"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reason"
+                            style="@style/TextInputLayout"
+                            app:layout_constraintStart_toStartOf="@+id/il_value"
+                            app:layout_constraintEnd_toEndOf="@+id/il_value"
+                            app:layout_constraintTop_toBottomOf="@+id/il_first_parcels"
+                            android:layout_marginVertical="10dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/iet_reason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/btn_send_proposal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/button_send_proposal"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            app:layout_constraintEnd_toEndOf="@+id/il_reason"
+                            app:layout_constraintStart_toStartOf="@+id/il_reason"
+                            app:layout_constraintTop_toBottomOf="@+id/il_reason"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcv_follow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/mcv_home"
+                    app:layout_constraintEnd_toEndOf="@+id/mcv_home"
+                    app:layout_constraintTop_toBottomOf="@+id/mcv_home"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:strokeColor="@color/colorPrimaryDark"
+                    app:strokeWidth="2dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/follow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            app:fontFamily="@font/font_exo_bold"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
