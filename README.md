@@ -31,7 +31,7 @@ O visual foi criado utilizando a ferramenta CorelDrawn, caso tenham interesse vo
 um pouco mais sobre mim e meus trabalhos visuais já criados.
 > Behance: https://www.behance.net/mateusviana4
 
-Gostaria de aproveitar e citar a ajuda do site Freepik que ha muito tempo é um diferencial na hora dessas criações e que nos ajudam e agilizam nossas criações.
+Gostaria de aproveitar e citar a ajuda do site Freepik que ha muito tempo é um diferencial na hora dessas criações e que nos ajudam e agilizam nossos trabalhos.
 <a href="http://www.freepik.com">Designed by Deeplab / Freepik</a>
 
 
