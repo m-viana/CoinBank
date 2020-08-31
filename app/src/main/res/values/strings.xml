@@ -79,9 +79,15 @@
     <!--Tela de Acompanhamento de proposta-->
     <string name="text_status">SEU PEDIDO FOI</string>
     <string name="tv_status">APROVADO</string>
-    <string name="message_status">O valor solicitado foi\ndepositado em sua conta\ne já pode ser
-        resgatado!</string>
+    <string name="message_status">Mas não fique chateado!\nVocê ainda pode\nrealizar uma nova
+        solicitação!</string>
+    <string name="message_status_accept">Segue abaixo algumas informaçoes\nsobre o valor
+        liberado.</string>
     <string name="button_back">VOLTAR</string>
+    <string name="button_accept">ACEITAR</string>
+    <string name="date_first">Data da primeira parcela:\n10/10/2020</string>
+    <string name="value_status">Valor solicitado:\nR$7500,00</string>
+    <string name="value_interest">Valor total a pagar (juros de 2,0% a.m):</string>
 
     <!--Menu-->
     <string name="menu_info">INFO</string>
@@ -109,5 +115,6 @@
     <string name="reason">Qual finalidade?</string>
     <string name="follow">ACOMPANHAR PROPOSTA!</string>
     <string name="button_send_proposal">Solicitar um empréstimo!</string>
+
 
 </resources>

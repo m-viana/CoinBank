@@ -5,7 +5,7 @@
         android:title="@string/menu_home" />
 
     <item android:id="@+id/nav_info"
-        android:icon="@drawable/ic_info"
+        android:icon="@drawable/ic_icon_info"
         android:title="@string/menu_info"
         />
 </menu>

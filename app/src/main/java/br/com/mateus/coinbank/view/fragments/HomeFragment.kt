@@ -32,7 +32,8 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
-        mcv_follow.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_statusFragment) }
+
+        btn_send_proposal.setOnClickListener { validacaoProposal() }
 
         /*Subindo o bottom sheet ao clicar em sair*/
         exit_home.setOnClickListener {
@@ -53,4 +54,27 @@ class HomeFragment : Fragment() {
 
     }
 
+    private fun validacaoProposal() {
+
+        val bundle = Bundle()
+        val valor = iet_value.text.toString().toDouble()
+        val renda = iet_monthly_income.text.toString().toDouble()
+        val quantParcelas = iet_many_parcels.text.toString().toDouble()
+        val dataInicio = iet_first_parcels.text.toString()
+        val valorParcela = valor / quantParcelas
+        val valorTotal = valor + (valorParcela* 0.02 * quantParcelas)
+
+        if (valorParcela >= renda){
+            bundle.putString("key_status", "REPROVADO")
+            findNavController().navigate(R.id.action_nav_home_to_statusFragment, bundle)
+        } else if(valorParcela < renda){
+            bundle.putString("key_status", "APROVADO")
+            bundle.putDouble("key_valorTotal", valorTotal)
+            bundle.putDouble("key_valor", valor)
+            bundle.putString("key_data", dataInicio)
+            findNavController().navigate(R.id.action_nav_home_to_statusFragment, bundle)
+        }
+    }
+
 }
+

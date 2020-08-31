@@ -19,7 +19,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_info"
@@ -28,118 +28,79 @@
         app:cardElevation="2dp"
         app:cardCornerRadius="5dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:layout_margin="10dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_change_password"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:text="@string/change_password"
-                android:drawableStart="@drawable/ic_change_password"
-                android:layout_marginHorizontal="10dp"
+                android:drawableStart="@drawable/ic_password"
                 style="@style/textInfoMenu"/>
 
             <View
                 android:id="@+id/view_change_password"
                 style="@style/viewInformações"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_change_password"
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginVertical="5dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_about_info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_change_password"
                 android:text="@string/about_info"
-                android:drawableStart="@drawable/ic_icon_about"
-                android:layout_marginHorizontal="8dp"
+                android:drawableStart="@drawable/ic_about"
                 style="@style/textInfoMenu"/>
 
             <View
                 android:id="@+id/view_about_info"
                 style="@style/viewInformações"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_about_info"
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginVertical="5dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_pp_info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_about_info"
                 android:text="@string/pp_info"
                 android:drawableStart="@drawable/ic_terms"
-                android:layout_marginHorizontal="10dp"
                 style="@style/textInfoMenu"/>
 
             <View
                 android:id="@+id/view_pp_info"
                 style="@style/viewInformações"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_pp_info"
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginVertical="5dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_terms_use_info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_pp_info"
                 android:text="@string/terms_use_info"
                 android:drawableStart="@drawable/ic_terms"
-                android:layout_marginHorizontal="10dp"
                 style="@style/textInfoMenu"/>
 
             <View
                 android:id="@+id/view_terms_use_info"
                 style="@style/viewInformações"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_terms_use_info"
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginVertical="5dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_contact_info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_terms_use_info"
                 android:text="@string/contact_info"
                 android:drawableStart="@drawable/ic_contact"
-                android:layout_marginHorizontal="5dp"
                 style="@style/textInfoMenu"/>
 
             <View
                 android:id="@+id/view_contact_info"
                 style="@style/viewInformações"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_contact_info"
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginVertical="5dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_exit_info"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_contact_info"
                 android:text="@string/exit_info"
-                android:drawablePadding="25dp"
                 android:drawableStart="@drawable/ic_exit"
-                android:layout_marginHorizontal="10dp"
                 style="@style/textInfoMenu"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
