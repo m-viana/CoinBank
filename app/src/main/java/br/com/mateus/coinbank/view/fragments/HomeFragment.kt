@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.mateus.coinbank.R
 import br.com.mateus.coinbank.viewmodel.HomeViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment() {
@@ -33,7 +34,7 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
 
-        btn_send_proposal.setOnClickListener { validacaoProposal() }
+        btn_send_proposal.setOnClickListener { validacaoField() }
 
         /*Subindo o bottom sheet ao clicar em sair*/
         exit_home.setOnClickListener {
@@ -52,6 +53,53 @@ class HomeFragment : Fragment() {
             dialog.show()
         }
 
+    }
+
+    private fun validacaoField() {
+        var statusValue = false
+        var statusMonthly = false
+        var statusManyParcels = false
+        var statusDate = false
+
+        if (!iet_value.text.isNullOrEmpty()){
+            statusValue = true
+            il_value.error = null
+
+        }else{
+            il_value.error = "Digite um valor"
+            il_value.requestFocus()
+        }
+
+        if (!iet_monthly_income.text.isNullOrEmpty()){
+            statusMonthly = true
+            il_monthly_income.error = null
+
+        }else{
+            il_monthly_income.error = "Digite sua renda"
+            il_monthly_income.requestFocus()
+        }
+
+        if (!iet_many_parcels.text.isNullOrEmpty()){
+            statusManyParcels = true
+            il_many_parcels.error = null
+
+        }else{
+            il_many_parcels.error = "Digite a quantidade de parcelas"
+            il_many_parcels.requestFocus()
+        }
+
+        if (!iet_first_parcels.text.isNullOrEmpty()){
+            statusDate = true
+            il_first_parcels.error = null
+
+        }else{
+            il_first_parcels.error = "Digite quando quer começar pagar"
+            il_first_parcels.requestFocus()
+        }
+
+        if (statusValue && statusMonthly && statusManyParcels && statusDate){
+            validacaoProposal()
+        }
     }
 
     private fun validacaoProposal() {
