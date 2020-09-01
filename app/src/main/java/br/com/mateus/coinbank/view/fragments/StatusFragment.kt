@@ -57,7 +57,7 @@ class StatusFragment : Fragment() {
             tv_message_status.setText(R.string.message_status_accept)
             tv_date_first.text = "Data da primeira parcela:\n $dataInicio"
             tv_value_status.text = "Valor solicitado:\n $valor"
-            tv_value_interest.text = "Valor total a pagar (juros de 2,0% a.m):\nR$$valorTotal"
+            tv_value_interest.text = "Valor total a pagar (com juros):\nR$$valorTotal"
 
         }
 

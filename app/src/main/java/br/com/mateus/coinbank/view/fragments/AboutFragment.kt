@@ -31,7 +31,7 @@ class AboutFragment : Fragment() {
 
         tb_about.setOnClickListener { activity?.onBackPressed() }
 
-        /*Aqui recebe o valor do fragment que está passando, posso alterar o titulo e esconder itens*/
+        /*Aqui recebo o valor do fragment que está passando, posso alterar o titulo e esconder itens*/
         val title = arguments?.getString("key_about") ?: "NAO VEIO"
         if (title == "SOBRE"){
             tb_about.title = title

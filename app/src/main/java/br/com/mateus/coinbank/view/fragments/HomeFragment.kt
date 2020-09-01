@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import br.com.mateus.coinbank.R
 import br.com.mateus.coinbank.viewmodel.HomeViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment() {
@@ -32,7 +31,6 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
-
 
         btn_send_proposal.setOnClickListener { validacaoField() }
 
@@ -110,7 +108,7 @@ class HomeFragment : Fragment() {
         val quantParcelas = iet_many_parcels.text.toString().toDouble()
         val dataInicio = iet_first_parcels.text.toString()
         val valorParcela = valor / quantParcelas
-        val valorTotal = valor + (valorParcela* 0.02 * quantParcelas)
+        val valorTotal = valor + (valorParcela* 0.2 * quantParcelas)
 
         if (valorParcela >= renda){
             bundle.putString("key_status", "REPROVADO")

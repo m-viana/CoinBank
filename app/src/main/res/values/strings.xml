@@ -87,7 +87,7 @@
     <string name="button_accept">ACEITAR</string>
     <string name="date_first">Data da primeira parcela:\n10/10/2020</string>
     <string name="value_status">Valor solicitado:\nR$7500,00</string>
-    <string name="value_interest">Valor total a pagar (juros de 2,0% a.m):</string>
+    <string name="value_interest">Valor total a pagar:</string>
 
     <!--Menu-->
     <string name="menu_info">INFO</string>

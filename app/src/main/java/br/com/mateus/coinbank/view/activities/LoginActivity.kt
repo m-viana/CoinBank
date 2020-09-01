@@ -53,7 +53,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-
     fun forgetPassword(){
         val intent = Intent(this, ForgetPasswordActivity::class.java)
         startActivity(intent)

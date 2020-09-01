@@ -50,7 +50,6 @@
     </style>
 
     <!--View entre os textos das opções do card da tela Informações-->
-
     <style name="viewInformações" parent="Widget.MaterialComponents.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>

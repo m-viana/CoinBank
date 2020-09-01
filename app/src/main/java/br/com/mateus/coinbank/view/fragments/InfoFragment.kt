@@ -36,8 +36,8 @@ class InfoFragment : Fragment() {
         tv_change_password.setOnClickListener { findNavController().navigate(R.id.action_nav_info_to_changePasswordFragment) }
         tv_contact_info.setOnClickListener { findNavController().navigate(R.id.action_nav_info_to_contactFragment) }
 
-        /*Envia um argumento que é recebido do outro lado, possui uma chave e um título, quando
-        * passo um argumento tmb preciso passar o bundle junto com o navigate*/
+        /*Envia um argumento que é recebido do outro lado, possui uma chave e a informação a ser
+        passada, quando passo um argumento tmb preciso passar o bundle junto com a action*/
         tv_about_info.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("key_about", "SOBRE")
